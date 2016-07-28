@@ -13,10 +13,13 @@ var core_1 = require('@angular/core');
 var RedditApp = (function () {
     function RedditApp() {
     }
+    RedditApp.prototype.addArticle = function (title, link) {
+        console.log("Adding article title: " + title.value + " and link: " + link.value);
+    };
     RedditApp = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <form class=\"ui large from segment\">\n    <h3 class=\"ui header\"> Add a Link </h3>\n    \n    <div class=\"feild\">\n      <label for=\"title\">Title: </label>\n      <input name=\"title\">\n      </div>\n      \n      <div class=\"feild\">\n        <label for=\"link\">Link: </label>\n        <input name=\"link\">\n        </div>\n     </form>\n  "
+            template: "\n  <form class=\"ui large from segment\">\n    <h3 class=\"ui header\"> Add a Link </h3>\n    \n    <div class=\"feild\">\n      <label for=\"title\">Title: </label>\n      <input name=\"title\" #newtitle>\n      </div>\n      \n      <div class=\"feild\">\n        <label for=\"link\">Link: </label>\n        <input name=\"link\" #newlink>\n        </div>\n        \n        <button (click)=\"addArticle(newtitle, newlink)\" class=\"ui positive right floated button\">\n          Submit Link\n          </button>\n     </form>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], RedditApp);
