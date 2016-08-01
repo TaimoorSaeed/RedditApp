@@ -1,9 +1,10 @@
 import { Component } from '@angular/core'
 
+
 @Component({
 	selector: 'reddit-article',
 	host:{
-		class= 'row'
+		class: 'row'
 	},
 	template:`
 	 <div class="four wide column center aligned votes">
@@ -16,7 +17,45 @@ import { Component } from '@angular/core'
 			</div>
 		</div>
 		</div>
-		<div class="twleve wide column">
-		
-}
+		<div class="tweleve wide column">
+		<a class="ui large header" href="{{ link }}">
+		{{ title }}
+		</a>
+		<ul class="ui big horizontal list voters">
+			<li class="item">
+			<a href (click)="voteUp()">
+			<i class="arrow up icon"></i>
+			upvote
+			</a>
+			<li class="item">
+			<a href (click)="voteDown()">
+			<i class="arrow down icon"></i>
+			downvote
+					</a>
+				</li>
+			</ul>
+		</div>
+		`
 })
+
+export class ArticleComponent {
+	votes: number;
+	title: string;
+	link: string;
+
+	constructor(){
+		this.title="Angular2";
+		this.link='http://angular.io';
+		this.votes=10;
+	}
+
+	voteUp(){
+		this.votes += 1;
+		return false;
+	}
+
+	voteDown(){
+		this.votes -= 1;
+		return false;
+	}
+}

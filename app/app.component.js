@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 // import { bootstrap } from '@angular/platform-browser-dynamic';
 var core_1 = require('@angular/core');
+var app_articlecomponent_1 = require('./app.articlecomponent');
 var RedditApp = (function () {
     function RedditApp() {
     }
@@ -18,8 +19,9 @@ var RedditApp = (function () {
     };
     RedditApp = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n  <form class=\"ui large from segment\">\n    <h3 class=\"ui header\"> Add a Link </h3>\n    \n    <div class=\"feild\">\n      <label for=\"title\">Title: </label>\n      <input name=\"title\" #newtitle>\n      </div>\n      \n      <div class=\"feild\">\n        <label for=\"link\">Link: </label>\n        <input name=\"link\" #newlink>\n        </div>\n        \n        <button (click)=\"addArticle(newtitle, newlink)\" class=\"ui positive right floated button\">\n          Submit Link\n          </button>\n     </form>\n  "
+            selector: 'reddit',
+            template: "\n  <form class=\"ui large from segment\">\n    <h3 class=\"ui header\"> Add a Link </h3>\n    \n    <div class=\"feild\">\n      <label for=\"title\">Title: </label>\n      <input name=\"title\" #newtitle>\n      </div>\n      \n      <div class=\"feild\">\n        <label for=\"link\">Link: </label>\n        <input name=\"link\" #newlink>\n        </div>\n        \n        <button (click)=\"addArticle(newtitle, newlink)\" class=\"ui positive right floated button\">\n          Submit Link\n          </button>\n     </form>\n\n     <div class= \"ui grid posts\">\n      <reddit-article></reddit-article>\n      </div>\n  ",
+            directives: [app_articlecomponent_1.ArticleComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], RedditApp);
