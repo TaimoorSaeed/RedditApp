@@ -29,7 +29,7 @@ import { ArticleComponent , Article} from './app.articlecomponent';
   </form>
   
   <div class="ui grid posts">
-    <reddit-article *ngFor="let foobar of articles" [article]="foobar">
+    <reddit-article *ngFor="let article of sortedArticles()" [article]="article">
     </reddit-article>
   </div>
   `  ,
@@ -41,7 +41,7 @@ export class RedditApp {
   
   constructor(){
     this.articles= [
-      new Article('Angular2' , 'http://angular.io',3),
+      new Article('KamranQadri' , 'http://www.qadribhai.com',3),
       new Article('FullStack' , 'http://fullstack.io',2),
       new Article('Angular HomePage' , 'http://angular.io',1),
     ];
@@ -55,7 +55,7 @@ export class RedditApp {
   }
   
   sortedArticles(): Article[]{
-    return this.articles.sort((a:Article , b: Article) => b.votes - a.votes); 
+    return this.articles.sort((a: Article , b: Article) => b.votes - a.votes); 
   }
   
  }
