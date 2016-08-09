@@ -14,7 +14,7 @@ var app_articlecomponent_1 = require('./app.articlecomponent');
 var RedditApp = (function () {
     function RedditApp() {
         this.articles = [
-            new app_articlecomponent_1.Article('KamranQadri', 'http://www.qadribhai.com', 3),
+            new app_articlecomponent_1.Article('Angular2', 'http://www.angular.iohttps://redditapp-ea995.firebaseapp.com/', 3),
             new app_articlecomponent_1.Article('FullStack', 'http://fullstack.io', 2),
             new app_articlecomponent_1.Article('Angular HomePage', 'http://angular.io', 1),
         ];

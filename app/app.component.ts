@@ -41,7 +41,7 @@ export class RedditApp {
   
   constructor(){
     this.articles= [
-      new Article('KamranQadri' , 'http://www.qadribhai.com',3),
+      new Article('Angular2' , 'http://www.angular.iohttps://redditapp-ea995.firebaseapp.com/',3),
       new Article('FullStack' , 'http://fullstack.io',2),
       new Article('Angular HomePage' , 'http://angular.io',1),
     ];

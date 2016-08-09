@@ -3,11 +3,38 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
+
+.heading{
+  padding-left: 25px;
+  padding-top: 25px;
+
+}
+.padding10{
+  padding-top: 10px;
+}
+
 body {
   margin: 2em;
 }
 
- /*
-  * See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
-  * for the full set of master styles used by the documentation samples
-  */
+/*ul{
+  list-style-type: none !important;
+}
+li
+{
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+  float: left;*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    display: flex;
+}
+
+li a {
+    display: block;
+   padding-right: 10px;
+}
